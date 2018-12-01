@@ -11,4 +11,4 @@ def custom_func_x(x, power, const):
 
 
 def custom_non_lin_num_list(length, const, power):
-    pass
+    return [custom_func_x(x, power, const) for x in range(length)]
