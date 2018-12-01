@@ -1,7 +1,8 @@
 import unittest
-from mycode import *
+from app import *
 
 
+# must inherit from TestCase?
 class MyFirstTests(unittest.TestCase):
 
     def test_hello(self):
