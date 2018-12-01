@@ -7,22 +7,25 @@ class MyFirstTests(unittest.TestCase):
     def test_hello(self):
         self.assertEqual(hello_world(), 'hello world')
 
+    def test_custon_num_list(self):
+        self.assertEqual(len(create_num_list(10)), 10)
+
 
 if __name__ == '__main__':
     unittest.main()
 
 # Running this file results in following output:
 #
-# F
+# E.
 # == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
-# FAIL: test_hello(__main__.MyFirstTests)
+# ERROR: test_custon_num_list(__main__.MyFirstTests)
 # ----------------------------------------------------------------------
 # Traceback(most recent call last):
-#   File "mytests.py", line 8, in test_hello
-#   self.assertEqual(hello_world(), 'hello world')
-# AssertionError: None != 'hello world'
+#   File "mytests.py", line 11, in test_custon_num_list
+#   self.assertEqual(len(create_num_list(10)), 10)
+# TypeError: object of type 'NoneType' has no len()
 
 # ----------------------------------------------------------------------
-# Ran 1 test in 0.003s
+# Ran 2 tests in 0.001s
 
-# FAILED(failures=1)
+# FAILED(errors=1)
